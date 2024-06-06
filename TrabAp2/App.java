@@ -5,7 +5,7 @@ public class App {
 	public static void main(String[] args) {
 			Scanner sc = new Scanner(System.in);
 			ArrayList<Aluno>alunos = new ArrayList<Aluno>();
-		for(int i = 0; i<2;i++) {
+		for(int i = 0; i<5;i++) {
 			Aluno aluno = new Aluno();
 		
 			System.out.println("Digite o nome do aluno: ");
