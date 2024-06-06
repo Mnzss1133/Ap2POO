@@ -4,8 +4,8 @@ import java.util.Scanner;
 public class App {
 	public static void main(String[] args) {
 			Scanner sc = new Scanner(System.in);
-			ArrayList<Aluno>alunos = new ArrayList<Aluno>(5);
-		for(int i = 0; i<5;i++) {
+			ArrayList<Aluno>alunos = new ArrayList<Aluno>();
+		for(int i = 0; i<2;i++) {
 			Aluno aluno = new Aluno();
 		
 			System.out.println("Digite o nome do aluno: ");
@@ -26,17 +26,29 @@ public class App {
 			
 		
 		boolean mensagem = false;
-	     for(Aluno aluno : alunos) {
-	    	 System.out.println(aluno.getNome() + ", media: "+ aluno.getMedia());
-	    	 System.out.println(aluno.getNome().charAt(0) + ": " + aluno.getMatricula());
-	    	
+		 System.out.println("A turma é composta por : ");
+		 for(Aluno turma : alunos) {
+	    	 System.out.println(turma.getNome() + ","+ "idade: " + turma.getIdade() + ", matrícula: "+ turma.getMatricula());
 	     }
-	     for(Aluno aluno : alunos) {  	
-		     if(aluno.getMedia()>7.0) {
-	      	   System.out.println("Matricula: " + aluno.getMatricula());
+		 System.out.println("-----------");
+		 System.out.println("Nome e media :");
+	     for(Aluno turma : alunos) {
+	    	 System.out.println(turma.getNome() + ", media: "+ turma.getMedia());
+	     }
+	    System.out.println("-----------");
+	    System.out.println("Primeira letra do nome + matrícula");
+	     
+	     for(Aluno turma : alunos) {
+	    	 System.out.println(turma.getNome().charAt(0) + ": " + turma.getMatricula());
+	     }
+	     System.out.println("-----------");
+	     System.out.println("Matrícula dos alunos com média maior que 7: ");
+	     for(Aluno turma : alunos) {  	
+		     if(turma.getMedia()>7.0) {
+	      	   System.out.println("Matricula: " + turma.getMatricula());
 	      	   mensagem=true;
 		     }
-	        }
+	       }
 	     	
 	         if (mensagem==false) {
 	        	 System.out.println("Nenhum aluno com média maior que 7 foi encontrado");
